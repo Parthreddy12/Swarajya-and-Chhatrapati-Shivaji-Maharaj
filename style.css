@@ -36,6 +36,7 @@ nav {
     padding-bottom: 5px;
     position: relative;
     width: max-content;
+    cursor: pointer;
 }
 .a:hover {
     color: rgb(255, 0, 0);
@@ -70,19 +71,44 @@ nav {
     text-shadow: 2px 2px 5px black;
 
 }
-.rajmudra {
-    width: 150px;
-    height: auto;
-    justify-items: end;
+.slide-in{
+    opacity: 0;
+    animation: slideFromLeft 1s ease-out forwards;
 }
+.slide-up{
+    opacity: 0;
+    animation: slideFromBottom 1s ease-out forwards;
+}
+
 .Maharaj {
     padding-top: 10px;
     margin-left: 120px;
     color: white;
     text-shadow: 2px 2px 5px black;
     display: flex;
+    animation-delay: 0.2s;
 }
 
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideFromBottom {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 .logo {
     position: relative;
 }
@@ -121,24 +147,6 @@ header {
     width: 100px;
     height: auto;
     top: -21px;
-}
-.Ghoshna-container {
-    background: transparent;
-    backdrop-filter: blur(10px);
-    width: max-content;
-    margin-top: 40px;
-    margin-right: 80px;
-    border: 1.2px solid white;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgb(0, 0, 0); 
-    border-radius: 0 70px 0 70px;
-    justify-self: end;
-}
-.Ghoshna {
-    color: white;
-    text-align: center;
-    text-shadow: 2px 2px 5px black;
-    
 }
 footer {
     background-color: #000000;

@@ -1,0 +1,71 @@
+.box {
+    width: 340px;
+    height: 150px;
+    margin-bottom: 10px;
+    border: 1.2px solid rgba(255, 255, 255, 0.671);
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+.box p {
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    text-shadow: 2px 2px 5px black;
+    padding: 10px;
+    justify-self: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.scroll-box {
+    margin-left: 100px;
+    margin-top: 170px;
+    width: 360px;
+    height: 150px;
+    padding: 10px;
+    display: grid;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    justify-self: end;
+    cursor: pointer;
+}
+
+.scroll-box::-webkit-scrollbar {
+    display: none;
+}
+
+.info-box {
+    width: 0px;
+    height: 0px;
+    padding: 15px;
+    border-radius: 15px;
+    margin-right: 100px;
+    margin-top: 170px;
+    border: 1px solid white;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    color: white;
+    display: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.info-box.show {
+    display: block;
+    transition: 500ms;
+    width: 400px;
+    height: 300px;
+}
+.mavale-container {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mavale.css">
+    <title>Swarajya and Chhatrapati Shivaji Maharaj</title>
+</head>
+<header>
+    <div class="logo">
+        <img src="Images/Chhatrapati_Shivaji_Raje_Bhosale_Maharaj_Poster_4bfd5e5c-2591-4d11-aaae-a909b66d4402_grande-removebg-preview.png"
+            alt="" class="csm">
+        <div class="circle"></div>
+    </div>
+    <h2 class="Maharaj">श्री छत्रपती शिवाजी महाराज </h2>
+    <h1 style="font-family: Arial, sans-serif;" class="Welcome">Welcome to Swarajya and Chhatrapati Shivaji Maharaj
+    </h1>
+    <img class="rajmudra" src="Images/Ralmudra-removebg-preview.png" alt="">
+</header>
+<main class="content">
+    <nav>
+        <div class="tools">
+            <ul type="none" class="nav-links">
+                <li class="list-content"><a class="a" href="index.html">Home</a></li>
+                <li class="list-content"><a class="a" href="">Shivaji Maharaj</a></li>
+                <li class="list-content"><a class="a" href="">मावळे</a></li>
+                <li class="list-content"><a class="a" href="">Forts</a></li>
+                <li class="list-content"><a class="a" href="">Gallery</a></li>
+                <li class="list-content"><a class="a" href="">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <body>
+        <div class="mavale-container">
+
+            <div class="scroll-box ">
+
+
+                <div class="box" onclick="handleClick(this, 'tanaji')">
+                    <p>तानाजी मालुसरे</p>
+                </div>
+                <div class="box" onclick="handleClick(this, 'baji')">
+                    <p>बाजी प्रभू देशपांडे</p>
+                </div>
+                <div class="box" onclick="handleClick(this, 'hambir')">
+                    <p>हंबीरराव मोहिते</p>
+                </div>
+                <div class="box" onclick="handleClick(this, 'bahirji')">
+                    <p>बहिर्जी नाईक</p>
+                </div>
+                <div class="box" onclick="handleClick(this, 'netaji')">
+                    <p>नेताजी पालकर</p>
+                </div>
+                <div class="box" onclick="handleClick(this, 'yesaji')">
+                    <p>येसाजी कंक</p>
+                </div>
+                <div class="box" onclick="handleClick(this, 'kanhoji')">
+                    <p>कान्होजी जेधे</p>
+                </div>
+                <div class="box" onclick="handleClick(this, 'murarbaji')">
+                    <p>मुरारबाजी देशपांडे</p>
+                </div>
+            </div>
+            <div id="infoBox" class="info-box slide-up">
+                <p id="infoText"></p>
+            </div>
+        </div>
+    </body>
+</main>
+<footer>
+    <p>© 2025 Swarajya and Chhatrapati Shivaji Maharaj</p>
+</footer>
+<script>
+    function handleClick(element, name) {
+    const infoBox = document.getElementById("infoBox");
+    const infoText = document.getElementById("infoText");
+    infoBox.classList.add("show");
+
+    if (name === "tanaji") {
+        infoText.innerHTML = "तानाजी मालुसरे – छत्रपती शिवाजी महाराजांचे महान मावळे आणि पराक्रमी योद्धे.<br>" +
+                             "सिंहगड युद्धात त्यांनी अद्भुत शौर्य दाखवले आणि आपल्या प्राणांची आहुती दिली.<br>" +
+                             "त्यांची वीरता आणि देशभक्ती आजही मराठा इतिहासात प्रेरणादायक आहे.<br>" +
+                             "सिंहगडाचे महत्त्वाचे रक्षण आणि त्यांच्या धैर्यामुळे मराठा साम्राज्य अधिक बळकट झाले.";
+    } 
+    else if (name === "baji") {
+        infoText.innerHTML = "बाजी प्रभू देशपांडे – छत्रपती शिवाजी महाराजांचे अडिग निष्ठावंत मावळे.<br>" +
+                             "पावनखिंडीत त्यांनी शत्रूंचा सामना करत छत्रपतींचे रक्षण केले.<br>" +
+                             "त्यांच्या साहसामुळे छत्रपती सुरक्षितपणे युद्धभूमीवरून परतले.<br>" +
+                             "त्यांचा शौर्य आणि बलिदान मराठा इतिहासातील महान प्रेरणा आहे.";
+    }
+    else if (name === "hambir") {
+        infoText.innerHTML = "हंबीरराव मोहिते – कुशल सेनापती व पराक्रमी मावळा.<br>" +
+                             "त्यांनी अनेक मोहिमा यशस्वीरित्या पार पाडल्या.<br>" +
+                             "शिवाजी महाराजांच्या सैन्यात त्यांनी महत्त्वपूर्ण भूमिका बजावली.<br>" +
+                             "त्यांचा धैर्य आणि नेतृत्व कौशल्य आजही आदर्श आहे.";
+    }
+    else if (name === "bahirji") {
+        infoText.innerHTML = "बहिर्जी नाईक – छत्रपतींचे अडिग विश्वासू मावळे.<br>" +
+                             "त्यांनी किल्ले जिंकण्यात आणि मोहिमांमध्ये उत्कृष्ट कामगिरी केली.<br>" +
+                             "त्यांचा शौर्यशील स्वभाव आणि निष्ठा मराठा साम्राज्यातील प्रेरणा आहे.<br>" +
+                             "त्यांनी छत्रपतींच्या धोरणात महत्वाची मदत केली.";
+    }
+    else if (name === "netaji") {
+        infoText.innerHTML = "नेताजी पालकर – कुशल योद्धा आणि युद्धतंत्रज्ञ.<br>" +
+                             "त्यांनी छत्रपतींच्या सैन्याला युद्धात मार्गदर्शन केले.<br>" +
+                             "त्यांचा धैर्य आणि समर्पण मराठा साम्राज्यातील प्रेरणादायक घटक आहे.<br>" +
+                             "त्यांनी अनेक यशस्वी मोहिमा पूर्ण केल्या.";
+    }
+    else if (name === "yesaji") {
+        infoText.innerHTML = "येसाजी कंक – पराक्रमी मावळा आणि निष्ठावंत सैनिक.<br>" +
+                             "त्यांनी छत्रपतींच्या मोहिमांमध्ये साहस दाखवले.<br>" +
+                             "त्यांची शौर्यगाथा आजही इतिहासात जिवंत आहे.<br>" +
+                             "त्यांचे बलिदान आणि धैर्य समकालीन मराठ्यांसाठी आदर्श आहे.";
+    }
+    else if (name === "kanhoji") {
+        infoText.innerHTML = "कान्होजी जेधे – छत्रपती शिवाजी महाराजांचे प्रामाणिक आणि निष्ठावंत मावळे.<br>" +
+                             "त्यांनी अनेक युद्धांत पराक्रम दाखवला.<br>" +
+                             "त्यांचा धैर्य आणि वीरता आजही स्मरणात आहे.<br>" +
+                             "शिवाजी महाराजांच्या मोहिमांमध्ये त्यांचा महत्त्वपूर्ण सहभाग होता.";
+    }
+    else if (name === "murarbaji") {
+        infoText.innerHTML = "मुरारबाजी देशपांडे – पुरंदर किल्ला रक्षण करणारे महान योद्धा.<br>" +
+                             "त्यांनी छत्रपतींच्या सैन्याला महत्त्वपूर्ण मदत केली.<br>" +
+                             "त्यांचा शौर्य आणि देशभक्तीचा आदर्श अविस्मरणीय आहे.<br>" +
+                             "त्यांनी मराठा साम्राज्यातील सुरक्षा आणि प्रतिष्ठा मजबूत केली.";
+    }
+}
+
+</script>
+
+</html>
