@@ -23,8 +23,10 @@
     margin-bottom: 20px;
     margin-left: 60px;
     border: 1.2px solid rgba(255, 255, 255, 0.671);
-    background: transparent;
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     border-radius: 20px;
     transition: transform 0.3s ease 0.5s;
     transform: scale(1);
@@ -35,13 +37,35 @@
 
 .box.active{
     transform: scale(1.15);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    transition: box-shadow 0.3s ease;
     background: transparent;
     backdrop-filter: blur(10px);
+    animation: translateUp 1s ease;
 }
-.box:hover {
-    background: linear-gradient(180deg, rgba(255, 119, 0, 0.895), rgba(255, 0, 0, 0.801),rgb(255, 200, 0));
+ @keyframes translateUp {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.15);
+    }
 }
+@keyframes nextGlow {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.box.next-active {
+    animation: nextGlow 0.6s ease-out forwards;
+}
+
 
 
 .box p {
@@ -57,18 +81,23 @@
 }
 
 .scroll-box {
+    box-shadow: 10px 10px 30px rgba(255, 94, 0, 0.5);
+    border: 3px solid rgba(255, 255, 255, 0.504);
+    border-radius: 20px;
     margin-left: 100px;
     margin-top: 10px;
     width: 460px;
-    height: 250px;
+    height: 300px;
     padding: 20px;
-    scroll-snap-type: y mandatory;
     display: grid;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none;
     justify-self: end;
     cursor: pointer;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .scroll-box::-webkit-scrollbar {
