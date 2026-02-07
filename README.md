@@ -41,7 +41,7 @@ This project aims to support heritage-related functionalities by providing a coh
 ### Prerequisites
 This project requires the following dependencies:
 
-- **Programming Language:** HTML
+- **Programming Language:** HTML CSS JS
 
 ### Installation
 Build Swarajya-and-Chhatrapati-Shivaji-Maharaj from the source and install dependencies:
